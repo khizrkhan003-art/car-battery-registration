@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply text-gray-900 bg-white;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold tracking-tight;
+  }
+
+  h1 {
+    @apply text-3xl sm:text-4xl lg:text-5xl;
+  }
+
+  h2 {
+    @apply text-2xl sm:text-3xl lg:text-4xl;
+  }
+
+  h3 {
+    @apply text-xl sm:text-2xl;
+  }
+}
+
+@layer components {
+  .container-narrow {
+    @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-wide {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-12 sm:py-16 lg:py-20;
+  }
+
+  .uk-registration-input {
+    @apply uppercase tracking-wider font-bold text-xl text-center;
+    font-family: 'Courier New', monospace;
+  }
+
+  .prose-battery {
+    @apply text-gray-700 leading-relaxed;
+  }
+
+  .prose-battery h2 {
+    @apply text-gray-900 mt-10 mb-4;
+  }
+
+  .prose-battery h3 {
+    @apply text-gray-900 mt-8 mb-3;
+  }
+
+  .prose-battery p {
+    @apply mb-4;
+  }
+
+  .prose-battery ul {
+    @apply list-disc pl-6 mb-4 space-y-1;
+  }
+
+  .prose-battery ol {
+    @apply list-decimal pl-6 mb-4 space-y-1;
+  }
+
+  .prose-battery a {
+    @apply text-primary-600 hover:text-primary-700 underline;
+  }
+
+  .prose-battery strong {
+    @apply font-semibold text-gray-900;
+  }
+
+  .prose-battery table {
+    @apply w-full border-collapse mb-6;
+  }
+
+  .prose-battery th {
+    @apply bg-gray-50 px-4 py-2 text-left font-semibold text-gray-900 border border-gray-200;
+  }
+
+  .prose-battery td {
+    @apply px-4 py-2 border border-gray-200;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

@@ -1,0 +1,109 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model VehicleMake {
+  id        String   @id @default(cuid())
+  name      String
+  slug      String   @unique
+  country   String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  models    VehicleModel[]
+}
+
+model VehicleModel {
+  id        String   @id @default(cuid())
+  name      String
+  slug      String
+  makeId    String
+  make      VehicleMake @relation(fields: [makeId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  variants  VehicleVariant[]
+
+  @@unique([makeId, slug])
+}
+
+model VehicleVariant {
+  id          String   @id @default(cuid())
+  modelId     String
+  model       VehicleModel @relation(fields: [modelId], references: [id])
+  yearStart   Int
+  yearEnd     Int?
+  engine      String?
+  engineCode  String?
+  trim        String?
+  fuelType    String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  batterySpecs VehicleBatterySpec[]
+}
+
+model BatterySpecification {
+  id                  String   @id @default(cuid())
+  groupSize           String
+  batteryType         String
+  voltage             Float
+  cca                 Int
+  rc                  Int?
+  ah                  Int?
+  lengthMm            Float
+  widthMm             Float
+  heightMm            Float
+  terminalLayout      String?
+  startStopCompatible Boolean  @default(false)
+  notes               String?
+  source              String?
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+  vehicleBatterySpecs VehicleBatterySpec[]
+}
+
+model VehicleBatterySpec {
+  id                 String   @id @default(cuid())
+  vehicleVariantId   String
+  vehicleVariant     VehicleVariant @relation(fields: [vehicleVariantId], references: [id])
+  batterySpecId      String
+  batterySpec        BatterySpecification @relation(fields: [batterySpecId], references: [id])
+  isPrimary          Boolean  @default(true)
+  compatibilityNotes String?
+  source             String?
+  lastVerified       DateTime?
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+
+  @@unique([vehicleVariantId, batterySpecId])
+}
+
+model UKRegistrationCache {
+  id           String   @id @default(cuid())
+  registration String   @unique
+  vehicleMake  String?
+  vehicleModel String?
+  vehicleYear  Int?
+  engineSize   String?
+  fuelType     String?
+  colour       String?
+  lookupSource String?
+  cachedAt     DateTime @default(now())
+  expiresAt    DateTime
+}
+
+model Guide {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  title       String
+  description String
+  content     String
+  category    String
+  readingTime Int
+  publishedAt DateTime?
+  updatedAt   DateTime @updatedAt
+  isPublished Boolean  @default(true)
+}

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Battery Casing -->
+  <rect x="8" y="16" width="48" height="42" rx="6" fill="#0f172a" stroke="#1e293b" stroke-width="2"/>
+  
+  <!-- Terminals -->
+  <rect x="14" y="8" width="10" height="8" rx="2" fill="#ef4444"/>
+  <rect x="40" y="8" width="10" height="8" rx="2" fill="#3b82f6"/>
+  <text x="19" y="14" fill="#ffffff" font-size="8" font-family="sans-serif" font-weight="bold" text-anchor="middle">+</text>
+  <text x="45" y="14" fill="#ffffff" font-size="8" font-family="sans-serif" font-weight="bold" text-anchor="middle">-</text>
+  
+  <!-- UK Yellow Plate Accent Stripe -->
+  <rect x="12" y="24" width="40" height="8" rx="2" fill="#FFD200"/>
+  <rect x="12" y="24" width="6" height="8" rx="1" fill="#003399"/>
+  <text x="32" y="30" fill="#000000" font-size="6" font-family="monospace" font-weight="900" text-anchor="middle" letter-spacing="1">REG</text>
+  
+  <!-- Electric Lightning Bolt -->
+  <polygon points="34,36 28,45 33,45 30,54 38,43 33,43" fill="#fbbf24"/>
+</svg>

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)" />
+  
+  <!-- Subtle Grid Accent -->
+  <circle cx="950" cy="200" r="300" fill="#2563eb" opacity="0.12" filter="blur(60px)" />
+  <circle cx="250" cy="500" r="250" fill="#f59e0b" opacity="0.08" filter="blur(50px)" />
+  
+  <!-- Badge -->
+  <rect x="100" y="80" width="350" height="40" rx="20" fill="#1e293b" stroke="#334155" stroke-width="1.5" />
+  <text x="275" y="105" fill="#fde047" font-size="16" font-family="system-ui, sans-serif" font-weight="bold" text-anchor="middle">
+    🇬🇧 UK VEHICLE BATTERY MATCHING ENGINE
+  </text>
+  
+  <!-- Main Heading -->
+  <text x="100" y="180" fill="#ffffff" font-size="52" font-family="system-ui, sans-serif" font-weight="900">
+    Find Your Replacement
+  </text>
+  <text x="100" y="245" fill="#ffffff" font-size="52" font-family="system-ui, sans-serif" font-weight="900">
+    Car Battery by <tspan fill="#FFD200">Registration</tspan>
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="100" y="305" fill="#94a3b8" font-size="22" font-family="system-ui, sans-serif">
+    DVLA-verified fitment • Stop-Start AGM/EFB detection • Price comparison across UK retailers
+  </text>
+  
+  <!-- Authentic UK Yellow Number Plate Graphic -->
+  <g transform="translate(100, 360)">
+    <rect width="480" height="110" rx="16" fill="#FFD200" stroke="#000000" stroke-width="6" />
+    <!-- Blue UK band -->
+    <rect width="70" height="110" rx="10" fill="#003399" />
+    <text x="35" y="45" fill="#fde047" font-size="24" text-anchor="middle">★</text>
+    <text x="35" y="80" fill="#ffffff" font-size="20" font-family="system-ui, sans-serif" font-weight="bold" text-anchor="middle">UK</text>
+    <!-- Plate Text -->
+    <text x="275" y="80" fill="#000000" font-size="64" font-family="monospace, sans-serif" font-weight="900" letter-spacing="12" text-anchor="middle">EA18 WXY</text>
+  </g>
+  
+  <!-- Features List on Right -->
+  <g transform="translate(680, 360)">
+    <text x="0" y="25" fill="#ffffff" font-size="20" font-family="system-ui, sans-serif" font-weight="bold">✓ 100% Guaranteed Tray Fitment</text>
+    <text x="0" y="65" fill="#ffffff" font-size="20" font-family="system-ui, sans-serif" font-weight="bold">✓ Stop-Start AGM vs EFB Safety Check</text>
+    <text x="0" y="105" fill="#ffffff" font-size="20" font-family="system-ui, sans-serif" font-weight="bold">✓ Halfords, Tayna &amp; Euro Car Parts Prices</text>
+  </g>
+  
+  <!-- Footer Brand -->
+  <text x="100" y="565" fill="#64748b" font-size="18" font-family="system-ui, sans-serif">
+    www.carbatteryfinder.co.uk • Independent UK Automotive Guide
+  </text>
+</svg>
